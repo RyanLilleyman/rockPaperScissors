@@ -13,8 +13,6 @@
         });
     });
 
-    //Prompt user for rock, paper, or scissors
-    // and then convert the string as to help player out with valid input.
     
     console.log(playerSelect)
     playerSelect = playerSelect[0];
@@ -45,105 +43,110 @@ function computerSelection(){
     return test;
 }
 
-function game(){
+async function game(){
     //I use 0 = Rock, 1 = Paper, 2 = Scissors, 3 = Lizard, 4 = Spock
     let yWin = 0;
     let cWin = 0;
     let tie = 0;
     let repeat = 1;
+    const div = document.querySelector('.text-box');
+    const yScore = document.querySelector('.yWin');
+    const cScore = document.querySelector('.cWin')
     while (repeat = 1){
-        let pSelect = playerSelection();
+        let pSelect = await playerSelection();
         console.log(pSelect);
         let cSelect = computerSelection();
         console.log(cSelect);
 
         if(pSelect ==4){
             if(cSelect == 4){
-                console.log("That was a tie.");
+                div.textContent ="That was a tie.";
                 ++tie;
             }else if(cSelect==3){
                 ++cWin;
-                console.log("Lizard poisons Spock!");
+                div.textContent ="Lizard poisons Spock!";
             }else if(cSelect==2){
                 ++yWin;
-                console.log("Spock smashes Scissors!");
+                div.textContent ="Spock smashes Scissors!";
             }else if(cSelect==1){
                 ++cWin;
-                console.log("Paper disproves Spock!");
+                div.textContent ="Paper disproves Spock!";
             }else if(cSelect==0){
                 ++yWin;
-                console.log("Spock vaporizes Rock!");
+                div.textContent ="Spock vaporizes Rock!";
             };
         }else if(pSelect ==3){
             if(cSelect == 4){
                 ++yWin;
-                console.log("Lizard poisons Spock!");
+                div.textContent ="Lizard poisons Spock!";
             }else if(cSelect==3){
-                console.log("That was a tie.");
+                div.textContent ="That was a tie.";
                 ++tie;
             }else if(cSelect==2){
                 ++cWin;
-                console.log("Scissors decapitates Lizard!");
+                div.textContent ="Scissors decapitates Lizard!";
             }else if(cSelect==1){
                 ++yWin;
-                console.log("Lizard eats Paper!");
+                div.textContent ="Lizard eats Paper!";
             }else if(cSelect==0){
                 ++cWin;
-                console.log("Rock crushes Lizard!");
+                div.textContent ="Rock crushes Lizard!";
             };
         }else if(pSelect==2){
             if(cSelect == 4){
                ++cWin;
-               console.log("Spock smashes Scissors!");
+               div.textContent ="Spock smashes Scissors!";
             }else if(cSelect==3){
                 ++yWin;
-                console.log("Scissors decapitates Lizard!");
+                div.textContent ="Scissors decapitates Lizard!";
             }else if(cSelect==2){
-                console.log("That was a tie.")
+                div.textContent ="That was a tie."
                 ++tie;
             }else if(cSelect==1){
                 ++yWin;
-                console.log("Scissors cuts Paper!")
+                div.textContent ="Scissors cuts Paper!";
             }else if(cSelect==0){
                 ++cWin;
-                console.log("Rock crushes Scissors!");
+                div.textContent ="Rock crushes Scissors!";
             };
         }else if(pSelect==1){
             if(cSelect == 4){
                 ++yWin;
-                console.log("Paper disproves Spock!");
+                div.textContent ="Paper disproves Spock!";
             }else if(cSelect==3){
                 ++cWin;
-                console.log("Lizard eats Paper!");
+                div.textContent ="Lizard eats Paper!";
             }else if(cSelect==2){
                 ++cWin;
-                console.log("Scissors cuts Paper!");
+                div.textContent ="Scissors cuts Paper!";
             }else if(cSelect==1){
-                console.log("That was a tie.");
+                div.textContent ="That was a tie.";
                 ++tie;
             }else if(cSelect==0){
                 ++yWin;
-                console.log("Paper covers Rock!");
+                div.textContent ="Paper covers Rock!";
             };
         }else if(pSelect==0){
             if(cSelect == 4){
                 ++cWin;
-                console.log("Spock vaporizes Rock!");
+                div.textContent ="Spock vaporizes Rock!";
             }else if(cSelect==3){
                 ++yWin;
-                console.log("Rock crushes Lizard!");
+                div.textContent ="Rock crushes Lizard!";
             }else if(cSelect==2){
                 ++yWin;
-                console.log("Rock crushes Scissors!");
+                div.textContent ="Rock crushes Scissors!";
             }else if(cSelect==1){
                 ++cWin;
-                console.log("Paper covers Rock!");
+                div.textContent ="Paper covers Rock!";
             }else if(cSelect==0){
-                console.log("That was a tie.");
+                div.textContent ="That was a tie.";
                 ++tie;
             };
         };
 
+        yScore.textContent = yWin.toString();
+        cScore.textContent = cWin.toString();
         if(yWin == 5 || cWin == 5){
             repeat = 0;
             break
@@ -152,9 +155,9 @@ function game(){
         }
     }
     if(yWin>cWin){
-        console.log("You Win!");
+        div.textContent = 'You Win!';
     }else if(cWin>yWin){
-        console.log("You Lost!");
+        div.textContent = 'You Lose!';
     }
 
 }
