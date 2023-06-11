@@ -2,7 +2,7 @@
     position: relative;
     width: 300px;
     height: 300px;
-    margin: 75px auto 75px auto;
+    margin: 75px auto 50px auto;
 }
 
 .pentagram svg {
@@ -20,9 +20,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+.vertex:hover{
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
+.rotate{
+    display: inline-block;
+    transition: transform 0.5s;
+}
 
+.rotate:hover{
+    transform: scale(1.1) rotate(360deg);
+}
 
 
 .vertex:nth-of-type(1){
@@ -41,12 +53,12 @@
     background-image:url(./spock.png);
 }
 
-/**{
-    border: 1px solid black;
-}*/
+
+
 .nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 }
 
 .text-box{
@@ -58,21 +70,29 @@
 
 .footer{
     text-align: center;
+    margin-bottom:50px;
 }
 
 .help{
-    margin-left: 100px;
+    margin-right:100px;
 }
 
 .new-game{
-    margin-right: 100px;
+    margin-left:100px;
 }
 
 .header{
     text-align: center;
     margin-top:20px;
+    margin-bottom: 20px;
 }
 
 a{
     text-decoration: none;
+    transition: transform 0.5s;
+    display: inline-block;
+}
+
+a:hover{
+    transform: scale(1.2);
 }
