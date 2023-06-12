@@ -3,22 +3,25 @@
 
 .header{
     text-align: center;
-    margin-top:20px;
-    margin-bottom: 20px;
+    margin-top: 31px;
+    margin-bottom: 58px;
+    font-size: 18px;
 }
 
 .nav{
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-top: 50px;
 }
 
 .help{
-    margin-right:100px;
+    margin-right: 109px;
+    margin-left: 22px;
 }
 
 .new-game{
-    margin-left:100px;
+    margin-left: 75px;
 }
 
 /*main pentagram*/
@@ -27,7 +30,7 @@
     position: relative;
     width: 300px;
     height: 300px;
-    margin: 75px auto 50px auto;
+    margin: 6px auto 50px auto;
 }
 
 .pentagram svg {
@@ -53,7 +56,7 @@
     align-items: center;
     justify-content: center;
     transform-origin: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 .vertex:hover{
     transform: translate(-50%, -50%) scale(1.1);
@@ -85,7 +88,7 @@
 
 .rotate{
     display: inline-block;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
 }
 
 .rotate:hover{
@@ -94,7 +97,7 @@
 
 a{
     text-decoration: none;
-    transition: transform 0.5s;
+    transition: transform 0.3s ease-out;
     display: inline-block;
 }
 
