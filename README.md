@@ -3,6 +3,8 @@
 ## Overview
 A spirited, web-based rendition of the game Rock, Paper, Scissors, Lizard, Spock, as seen on the Big Bang Theory. This project utilizes HTML, CSS, and JavaScript to provide an interactive gaming experience.
 
+![Project Banner](https://github.com/RyanLilleyman/rockPaperScissors/blob/main/Screencast-from-07-15-2023-04_37_31-PM.gif)
+ 
 ## Features
 - Interactive gameplay with dynamic visuals
 - Responsive design for desktop and mobile gameplay
