@@ -8,7 +8,6 @@ A spirited, web-based rendition of the game Rock, Paper, Scissors, Lizard, Spock
 ## Features
 - Interactive gameplay with dynamic visuals
 - Responsive design for desktop and mobile gameplay
-- Engaging sound effects and animations
 
 ## Technologies Used
 - HTML5
@@ -16,7 +15,9 @@ A spirited, web-based rendition of the game Rock, Paper, Scissors, Lizard, Spock
 - JavaScript
 
 ## How to Play
-To play the game, clone this repository and open `index.html` in your web browser.
+To play the game, 
+Click the sidebar link.
+Or, clone this repository and open `index.html` in your web browser.
 
 ## Contribution
 Your thoughts and potential improvements are always welcome. Please feel free to fork the project and submit a pull request.
