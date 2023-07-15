@@ -16,7 +16,7 @@ A spirited, web-based rendition of the game Rock, Paper, Scissors, Lizard, Spock
 
 ## How to Play
 To play the game, 
-Click the sidebar link.
+click the sidebar link.
 Or, clone this repository and open `index.html` in your web browser.
 
 ## Contribution
